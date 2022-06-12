@@ -4,16 +4,25 @@ variable "rest_api_name"{
     default = "serverless-challenge-api-gateway"
 }
 
-variable "lambda_function_name" {
+variable "readLambda_function_name" {
   type        = string
-  description = "The name of the Lambda function"
-} //value comes from main.tf
+  description = "The name of the read Lambda function"
+} 
 
-variable "lambda_function_arn" {
+variable "readLambda_function_arn" {
   type        = string
-  description = "The ARN of the Lambda function"
-} //value comes from main.tf
+  description = "The ARN of the read Lambda function"
+} 
 
+variable "writeLambda_function_name" {
+  type        = string
+  description = "The name of the write Lambda function"
+} 
+
+variable "writeLambda_function_arn" {
+  type        = string
+  description = "The ARN of the write Lambda function"
+} 
 
 variable "rest_api_stage_name" {
   type        = string
