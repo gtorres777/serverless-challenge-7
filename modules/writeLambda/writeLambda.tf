@@ -35,6 +35,13 @@ resource "aws_iam_role" "writeLambda_execution_role" {
   assume_role_policy = file("policies/assume_writeLambda_role_policy.json")
 }
 
+resource "aws_iam_role_policy" "writeLambda_policy" {
+  name = "writelambda_policy"
+  role = aws_iam_role.writeLambda_execution_role.id
+
+  policy = file("policies/writeLambda_policy.json")
+}
+
 resource "aws_iam_role_policy_attachment" "writeLambda_policy" {
   role       = aws_iam_role.writeLambda_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"

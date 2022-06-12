@@ -35,6 +35,13 @@ resource "aws_iam_role" "readLambda_execution_role" {
   assume_role_policy = file("policies/assume_readLambda_role_policy.json")
 }
 
+resource "aws_iam_role_policy" "readLambda_policy" {
+  name = "readlambda_policy"
+  role = aws_iam_role.readLambda_execution_role.id
+
+  policy = file("policies/readLambda_policy.json")
+}
+
 resource "aws_iam_role_policy_attachment" "readLambda_policy" {
   role       = aws_iam_role.readLambda_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
