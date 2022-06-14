@@ -66,19 +66,20 @@ Run ```terraform output``` to get the invoke urls to test the application.
 
 Run ```curl -X POST -d '{"id":"1","name":"user1"}' https://xxxxxxxxxxxxxxxxx/prod/write_user``` to make a record of a new user
 
-Output:
+#### Output:
 
   `{"message":"Item entered successfully"}`
 
 
 Run ```curl -X POST -d '{"id":"1"}' https://xxxxxxxxxxxxxxxxx/prod/read_user``` to obtain an specific user by providing the id
 
-Output:
+#### Output:
 
   `{"message":{"Item":{"id":{"S":"1"},"name":{"S":"user1"}}}}`
 
 
-#### In this case this urls are live to be tested 
+
+### Invoke Urls live to be tested 
 
 #### readLambda_rest_api_url
  `https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/read_user`
@@ -88,13 +89,13 @@ Output:
 
 Run ```curl -X POST -d '{"id":"1","name":"Gustavo"}' https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user``` to make a record of a new user
 
-Output:
+#### Output:
 
   `{"message":"Item entered successfully"}`
 
 
 Run ```curl -X POST -d '{"id":"1"}' https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/read_user``` to obtain an specific user by providing the id
 
-Output:
+#### Output:
 
   `{"message":{"Item":{"id":{"S":"1"},"name":{"S":"Gustavo"}}}}`
