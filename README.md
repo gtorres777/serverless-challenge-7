@@ -86,7 +86,7 @@ Output:
 #### writeLambda_rest_api_url 
  `https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user` 
 
-Run ```curl -X POST -d '{"id":"1","name":"user1"}' https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user``` to make a record of a new user
+Run ```curl -X POST -d '{"id":"1","name":"Gustavo"}' https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user``` to make a record of a new user
 
 Output:
 
@@ -97,4 +97,4 @@ Run ```curl -X POST -d '{"id":"1"}' https://n10ved5464.execute-api.us-east-1.ama
 
 Output:
 
-  `{"message":{"Item":{"id":{"S":"1"},"name":{"S":"user1"}}}}`
+  `{"message":{"Item":{"id":{"S":"1"},"name":{"S":"Gustavo"}}}}`
