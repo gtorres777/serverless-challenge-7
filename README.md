@@ -61,8 +61,8 @@ Run ```terraform output``` to get the invoke urls to test the application.
 
 #### Example of urls obtained from output:
 
-``` - readLambda_rest_api_url = "https://xxxxxxxxxxxxxxxxx/prod/read_user" ```
-``` - writeLambda_rest_api_url = "https://xxxxxxxxxxxxxxxxx/prod/write_user" ```
+` - readLambda_rest_api_url = "https://xxxxxxxxxxxxxxxxx/prod/read_user" `
+` - writeLambda_rest_api_url = "https://xxxxxxxxxxxxxxxxx/prod/write_user" `
 
 Run ```curl -X POST -d '{"id":"1","name":"user1"}' https://xxxxxxxxxxxxxxxxx/prod/write_user``` to make a record of a new user
 
@@ -80,6 +80,6 @@ Output:
 
 #### In this case this urls are live to be tested 
 
-``` - readLambda_rest_api_url = "https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/read_user" ```
-``` - writeLambda_rest_api_url = "https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user" ``` 
+` - readLambda_rest_api_url = "https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/read_user" `
+` - writeLambda_rest_api_url = "https://n10ved5464.execute-api.us-east-1.amazonaws.com/prod/write_user" ` 
 
